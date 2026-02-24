@@ -98,7 +98,7 @@ def remove_black_background(img):
 def fetch_player_info(uid: str):
     for server in SERVERS:
         try:
-            url = f"https://mrc-info.vercel.app/get_player_personal_show?server={server}&uid={uid}"
+            url = f"https://flash-info-cbw4.vercel.app/info?uid={uid}&key=Flash"
             resp = session.get(url, timeout=IMAGE_TIMEOUT)
             if resp.status_code == 200:
                 data = resp.json()
