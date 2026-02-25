@@ -187,8 +187,8 @@ def find_item_for_slot(slot: dict, outfit_ids: list, used_ids: set) -> str | Non
     return None
 
 
-@app.route('/outfit', methods=['GET'])
-def make_outfit():
+@app.route('/outfit-image', methods=['GET'])
+def outfit_image():
     uid = request.args.get('uid')
     key = request.args.get('key')
 
