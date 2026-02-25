@@ -32,54 +32,55 @@ ICON_URL = "https://cdn.jsdelivr.net/gh/ShahGCreator/icon@main/PNG/{item_id}.png
 # Via used_ids mechanism:
 #   - First "211" match → Mask
 #   - Second "211" match → Head
+# --- OUTFIT CATEGORIES (ALIGNED FOR OCTAGON BACKGROUND) ---
 OUTFIT_SLOTS = [
     {
         "name": "Head",
         "prefix": "211",
         "default": "211000000",
-        "pos": {'x': 350, 'y': 45, 'width': 150, 'height': 150} # Top
+        "pos": {'x': 365, 'y': 85, 'width': 130, 'height': 130} # Top Center
     },
     {
         "name": "Face Paint",
         "prefix": "214",
         "default": "214000000",
-        "pos": {'x': 565, 'y': 135, 'width': 150, 'height': 150} # Top Right
+        "pos": {'x': 565, 'y': 165, 'width': 130, 'height': 130} # Top Right
     },
     {
         "name": "Mask",
         "prefix": "211",
         "default": "208000000",
-        "pos": {'x': 650, 'y': 350, 'width': 150, 'height': 150} # Right
+        "pos": {'x': 645, 'y': 365, 'width': 130, 'height': 130} # Right Center
     },
     {
         "name": "Top",
         "prefix": "203",
         "default": "203000000",
-        "pos": {'x': 565, 'y': 565, 'width': 150, 'height': 150} # Bottom Right
+        "pos": {'x': 565, 'y': 565, 'width': 130, 'height': 130} # Bottom Right
     },
     {
         "name": "Bottom",
         "prefix": "204",
         "default": "204000000",
-        "pos": {'x': 350, 'y': 655, 'width': 150, 'height': 150} # Bottom
+        "pos": {'x': 365, 'y': 645, 'width': 130, 'height': 130} # Bottom Center
     },
     {
         "name": "Shoes",
         "prefix": "205",
         "default": "205000000",
-        "pos": {'x': 135, 'y': 565, 'width': 150, 'height': 150} # Bottom Left
+        "pos": {'x': 165, 'y': 565, 'width': 130, 'height': 130} # Bottom Left
     },
     {
         "name": "Weapon",
         "prefix": "907",
         "default": None, 
-        "pos": {'x': 50, 'y': 350, 'width': 150, 'height': 150} # Left (Khali Octagon)
+        "pos": {'x': 85, 'y': 365, 'width': 130, 'height': 130} # Left Center
     },
     {
         "name": "Bundle",
         "prefix": "203",
         "default": "212000000",
-        "pos": {'x': 135, 'y': 135, 'width': 150, 'height': 150} # Top Left
+        "pos": {'x': 165, 'y': 165, 'width': 130, 'height': 130} # Top Left
     }
 ]
 
@@ -187,8 +188,8 @@ def find_item_for_slot(slot: dict, outfit_ids: list, used_ids: set) -> str | Non
     return None
 
 
-@app.route('/outfit-image', methods=['GET'])
-def outfit_image():
+@app.route('/outfit', methods=['GET'])
+def make_outfit():
     uid = request.args.get('uid')
     key = request.args.get('key')
 
