@@ -40,7 +40,7 @@ def fetch_and_process_image(image_url: str, size: tuple = None):
     except Exception:
         return None
 
-@app.route('/outfit', methods=['GET'])
+@app.route('/outfit-image', methods=['GET'])
 def outfit_image():
     uid = request.args.get('uid')
     key = request.args.get('key')
