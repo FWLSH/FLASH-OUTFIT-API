@@ -21,7 +21,7 @@ BACKGROUND_MODE = 'cover'           # choose 'cover' or 'contain'
 def fetch_player_info(uid: str):
     if not uid:
         return None
-    player_info_url = f"https://mrc-info.vercel.app/get_player_personal_show?server=ind&uid={uid}"
+    player_info_url = f"https://birthdayspecialinfoapi.vercel.app/player-info?uid={uid}"
     try:
         resp = session.get(player_info_url, timeout=IMAGE_TIMEOUT)
         resp.raise_for_status()
