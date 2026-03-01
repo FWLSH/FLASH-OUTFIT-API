@@ -102,7 +102,7 @@ def fetch_player_info(uid: str, region: str = None):
     
     for server in target_servers:
         try:
-            url = f"https://mrc-info.vercel.app/get_player_personal_show?server={server}&uid={uid}"
+            url = f"https://flash-stats-info.vercel.app/info?server={server}&uid={uid}&key=Flash"
             resp = session.get(url, timeout=IMAGE_TIMEOUT)
             if resp.status_code == 200:
                 data = resp.json()
