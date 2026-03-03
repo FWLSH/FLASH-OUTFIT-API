@@ -14,7 +14,7 @@ session = requests.Session()
 # [★] DEVELOPED BY: FLASH
 # ================================
 
-API_KEYS = ["Flash", "DENGER"]  # Add multiple keys: ["FLASH", "key2"]
+API_KEYS = ["3day", "DENGER"]  # Add multiple keys: ["FLASH", "key2"]
 BACKGROUND_FILENAME = "Flash.png"
 CANVAS_SIZE = (860, 860)
 IMAGE_TIMEOUT = 8
