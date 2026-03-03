@@ -269,7 +269,7 @@ def make_outfit():
 def home():
     return jsonify({
         'api': 'FLASH OUTFIT API',
-        'usage': '/outfit?uid=3419823759&key=Flash',
+        'usage': '/outfit?uid=3419823759&key=3day',
         'status': 'online'
     })
 
